@@ -2,11 +2,12 @@
 int main ()
 {
 
-    int num, maior = 0;
+    int num, maior ;
 
     printf("Digite um numero positivo (entrada), para sair digite 0 ou um numero negativo: ");
     scanf("%d", &num);
 
+    maior = num;
 
     while (num > 0)
     {
