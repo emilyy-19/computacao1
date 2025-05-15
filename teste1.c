@@ -20,6 +20,6 @@ int main()
 
     int verificador = CalculoDigitoVerificador(numero);
 
-    printf("Digito verificador: %d\n", verificador);
+    printf("verificador: %d\n", verificador);
     return 0;
 }
