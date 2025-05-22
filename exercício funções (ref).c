@@ -6,6 +6,8 @@ int calcula_raizes(float a, float b, float c, float *x1, float *x2)
     float delta;
 
     delta = b*b-4*a*c;
+
+    printf ("delta: %f\n", delta);
     if(delta<0)
     {
 
@@ -18,8 +20,10 @@ int calcula_raizes(float a, float b, float c, float *x1, float *x2)
     }
     else
     {
-        *x1 = (-b+sqrt(delta)/2*a);
-        *x2 = (-b-sqrt(delta)/2*a);
+        float temp=-b+sqrt(delta);
+
+        *x1 = temp /2*a;
+        *x2 = (-b-sqrt(delta))/2*a;
         return 2;
     }
 }
