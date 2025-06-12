@@ -5,7 +5,7 @@
 int main() {
     int mat[N][N];
     int i, j;
-    int soma_ref, soma;
+    int soma_referencia, soma;
 
     printf("Digite os elementos da matriz %dx%d:\n", N, N);
     for (i = 0; i < N; i++) {
@@ -16,7 +16,7 @@ int main() {
 
     soma_ref = 0;
     for (j = 0; j < N; j++) {
-        soma_ref += mat[0][j];
+        soma_referencia += mat[0][j];
     }
 
     for (i = 1; i < N; i++) {
@@ -24,7 +24,7 @@ int main() {
         for (j = 0; j < N; j++) {
             soma += mat[i][j];
         }
-        if (soma != soma_ref) {
+        if (soma != soma_referencia) {
             printf("Nao eh quadrado magico.\n");
             return 0;
         }
@@ -35,7 +35,7 @@ int main() {
         for (i = 0; i < N; i++) {
             soma += mat[i][j];
         }
-        if (soma != soma_ref) {
+        if (soma != soma_referencia) {
             printf("Nao eh quadrado magico.\n");
             return 0;
         }
@@ -45,7 +45,7 @@ int main() {
     for (i = 0; i < N; i++) {
         soma += mat[i][i];
     }
-    if (soma != soma_ref) {
+    if (soma != soma_referencia) {
         printf("Nao eh quadrado magico.\n");
         return 0;
     }
@@ -54,7 +54,7 @@ int main() {
     for (i = 0; i < N; i++) {
         soma += mat[i][N - 1 - i];
     }
-    if (soma != soma_ref) {
+    if (soma != soma_referencia) {
         printf("Nao eh quadrado magico.\n");
         return 0;
     }
